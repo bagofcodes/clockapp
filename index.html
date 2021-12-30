@@ -152,16 +152,18 @@
 
 
 
-            <!-- Highlights Div -->
-            <div id="highlights-div">
-                What's Up Fella !!
-            </div>
-
-
             <!-- Set Time Button Div -->
-            <button id="set-time-button" onclick="settime(true)">
+            <button id="set-time-button" onclick="settime()">
                 Set time!
             </button>
+
+            <!-- Highlights Div -->
+            <div id="highlights-div">
+                <div id="wakeupHL"></div>
+                <div id="lunchHL"></div>
+                <div id="napHL"></div>
+            </div>
+
         </div> 
         <!-- End of left container -->
 
@@ -200,7 +202,7 @@
                     <p class="time-text">Secs</p>
                 </div>
 
-                <div class="div-time" id="am-pm">
+                <div id="am-pm">
                     <span id="am-pm-text">AM</span>
                 </div>
 
