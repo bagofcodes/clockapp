@@ -64,7 +64,7 @@ function setDivCall(userValue){
     }
 }
 
-async function setDiv(userTimer,userValue,bool){
+function setDiv(userTimer,userValue,bool){
     // Elements to be Updated
     let highlightdiv=document.querySelector("#highlights-div");
     let textcontainer=document.querySelector("#text-container");
@@ -97,9 +97,12 @@ async function setDiv(userTimer,userValue,bool){
         hlnt.style.display = "initial";
         hlnt.textContent = "Nap time:- " + userTimer.get('naptime');
     }
-
-
-    highlightdiv.style.display="flex";
+    if(userTimer.get('wakeuptime') === 'Default' && userTimer.get('lunchtime') === 'Default' && userTimer.get('naptime') === 'Default'){
+        highlightdiv.style.display="none";
+    }
+    else{
+        highlightdiv.style.display="flex";
+    }
 
 
     let time24=new Date();
